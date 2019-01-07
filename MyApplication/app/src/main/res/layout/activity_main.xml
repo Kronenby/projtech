@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="ALLOOOO"
+        android:textAppearance="@android:style/TextAppearance.Material.Title"
+        app:layout_constraintStart_toStartOf="@+id/pewpew"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pewpew"
+        android:layout_width="277dp"
+        android:layout_height="182dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/size"
+        app:srcCompat="@drawable/crayon" />
+
+    <Button
+        android:id="@+id/butt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Treshold"
+        app:layout_constraintBottom_toBottomOf="@+id/butt5"
+        app:layout_constraintEnd_toStartOf="@+id/butt5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/butt5" />
+
+    <Button
+        android:id="@+id/butt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gray"
+        app:layout_constraintBottom_toBottomOf="@+id/butt3"
+        app:layout_constraintEnd_toStartOf="@+id/butt3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/butt3" />
+
+    <Button
+        android:id="@+id/butt3"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Reset"
+        app:layout_constraintEnd_toStartOf="@+id/butt4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butt2"
+        app:layout_constraintTop_toBottomOf="@+id/pewpew" />
+
+    <Button
+        android:id="@+id/butt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Colorize"
+        app:layout_constraintBottom_toBottomOf="@+id/butt3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butt3"
+        app:layout_constraintTop_toTopOf="@+id/butt3" />
+
+    <Switch
+        android:id="@+id/renderswitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:checked="false"
+        android:text="renderscript"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/baseswitch" />
+
+    <Button
+        android:id="@+id/butt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Contrast +"
+        app:layout_constraintEnd_toStartOf="@+id/butt6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butt"
+        app:layout_constraintTop_toBottomOf="@+id/butt3" />
+
+    <Button
+        android:id="@+id/butt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contrast -"
+        app:layout_constraintBottom_toBottomOf="@+id/butt5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butt5"
+        app:layout_constraintTop_toTopOf="@+id/butt5" />
+
+    <Button
+        android:id="@+id/butt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="ConvolExtr"
+        app:layout_constraintEnd_toStartOf="@+id/butt9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butt7"
+        app:layout_constraintTop_toBottomOf="@+id/butt5" />
+
+    <Switch
+        android:id="@+id/baseswitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="base image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/renderswitch"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butt7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="Convolblur"
+        app:layout_constraintBottom_toBottomOf="@+id/butt8"
+        app:layout_constraintEnd_toStartOf="@+id/butt8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/butt8" />
+
+    <Button
+        android:id="@+id/butt9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="ConvolNet"
+        app:layout_constraintBottom_toBottomOf="@+id/butt8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/butt8"
+        app:layout_constraintTop_toTopOf="@+id/butt8" />
+
+    <Button
+        android:id="@+id/butt10"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:text="Switch image"
+        app:layout_constraintBottom_toTopOf="@+id/pewpew"
+        app:layout_constraintEnd_toEndOf="@+id/pewpew"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
